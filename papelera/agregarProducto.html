@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Producto</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Panel de Control</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="categorias.html">Categorias</a></li>
+                <li><a href="Roles.html">Roles</a></li>
+                <li><a href="productos.html">Productos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Agregar Nuevo Producto</h2>
+        <form action="agregarProducto.php" method="post" enctype="multipart/form-data">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre del producto" autocomplete="off">
+            </div>
+            <div>
+                <label for="Imagen">Imgaen:</label>
+                <input type="file" name="imagen" id="imagen" accept="image/*">
+            </div>
+            <div>
+                <label>Categorias:</label>
+                <div>
+                    <label><input type="checkbox" name="Categoria" value="pizza">Pizzas</label>
+                    <label><input type="checkbox" name="Categoria" value="bebidas">Bebidas</label>
+                </div>
+            </div>
+                <div>
+                    <label for="Estado">Estado:</label>
+                    <select name="Estado" id="Estado">
+                        <option value="">Activo</option>
+                        <option value="">Inactivo</option>
+                    </select>
+                </div>
+            <div class="buttons">
+                <button type="submit">Agregar Producto</button>
+                <button type="button" onclick="location.href='index.html'">Cancelar</button>
+            </div>
+        </form>
+    </main>
+    
+</body>
+</html>

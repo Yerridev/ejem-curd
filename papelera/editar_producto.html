@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Producto</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Panel de Control</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Productos</a></li>
+                <li><a href="categorias.html">Categorias</a></li>
+                <li><a href="Roles.html">Roles</a></li>
+                <li><a href="productos.html">Inventario</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Editar Producto</h2>
+        <form action="editar_producto.php " method="post" enctype="multipart/form-data">
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre del producto" value="nombreProducto"  autocomplete="off">
+            </div>
+            <div>
+                <img src="" alt="">
+                <label for="Imagen">Imgaen</label>
+                <input type="file" name="imagen" id="imagen" accept="image/*">
+            </div>
+            <div>
+                <label>Categorias</label>
+                <div>
+                    <label><input type="checkbox" name="Categoria" value="pizza" checked>Pizzas</label>
+                    <label><input type="checkbox" name="Categoria" value="bebidas">Bebidas</label>
+                </div>
+                <div>
+                <label for="Estado">Estado</label>
+                <select name="Estado" id="Estado">
+                    <option value="">Activo</option>
+                    <option value="" selected>Inactivo</option>
+                </select>
+                </div>
+            </div>
+            <div class="buttons">
+                <button type="submit">Guardar Cambios</button>
+                <button type="button" onclick="location.href='index.html'">Cancelar</button>
+            </div>
+        </form>
+    </main>
+    
+</body>
+</html>
+
+

@@ -1,0 +1,13 @@
+# Options +MultiViews
+
+RewriteEngine On
+RewriteBase /ejm
+
+RewriteRule ^([a-z\-]+)$ index.php?entidad=$1 [NC]
+
+RewriteRule ^([a-z\-]+)/agregar$ index.php?entidad=$1&action=agregar [NC]
+
+RewriteRule ^([a-z\-]+)/(\d+)$ index.php?entidad=$1&id=$2&action=view [NC]
+RewriteRule ^([a-z\-]+)/(\d+)/(edit|delete|view)$ index.php?entidad=$1&id=$2&action=$3 [NC]
+
+
